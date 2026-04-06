@@ -24,3 +24,7 @@ dependencyResolutionManagement {
 
 rootProject.name = "DevJourney"
 include(":app")
+include(":core")
+include(":base")
+include(":profile")
+include(":countries")
