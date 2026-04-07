@@ -44,6 +44,7 @@ android {
 dependencies {
     implementation(project(":base"))
     implementation(project(":countries"))
+    implementation(project(":profile"))
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
     implementation(libs.androidx.activity.compose)

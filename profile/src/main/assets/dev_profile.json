@@ -1,0 +1,48 @@
+{
+  "profile": {
+    "name": "Deyber Manuel Parra Romero",
+    "title": "Senior Android Developer | Kotlin Multiplatform Engineer",
+    "profile_picture_url": "file:///android_asset/images/profile_picture.jpg",
+    "location": "Mérida, Mexico",
+    "contact": {
+      "email": "deyber.parra@gmail.com",
+      "linkedin": "linkedin.com/in/deyber-parra-74a8141b8"
+    },
+    "professional_summary": "Senior Android Developer with over 10 years of experience in software development, specializing in native Android and Kotlin Multiplatform (KMP). Expert in Clean Architecture and SOLID principles.",
+    "experience": [
+      {
+        "company": "CONSISS-Monterrey",
+        "role": "Senior Front Mobile Android Developer",
+        "description": "Development and maintenance of enterprise Android applications using scalable modular architectures and Zebra Handheld equipment."
+      },
+      {
+        "company": "CITI Value - CDMX",
+        "role": "Senior Android Developer",
+        "description": "Development of administrative and mobility applications within a Scrum ecosystem, implementing MVVM Modular Architecture."
+      },
+      {
+        "company": "Quetzalcoatl Sistemas - CDMX",
+        "role": "Senior Android Developer",
+        "description": "Development of national security applications with backend implementation using Firebase."
+      },
+      {
+        "company": "EASYGOBAND - SPAIN",
+        "role": "Mid-Senior Android / Kotlin Multiplatform Developer",
+        "description": "Development of payment applications for large-scale events and complete applications using Kotlin Multiplatform (KMP)."
+      }
+    ],
+    "education": [
+      {
+        "degree": "Bachelor's Degree in Computer Science",
+        "institution": "Instituto Tecnológico de Chetumal",
+        "year": "2012"
+      }
+    ],
+    "certifications": [
+      "Kotlin Multiplatform 2025",
+      "Jetpack Compose 2024",
+      "Google UX Design 2022",
+      "JetBrains Kotlin for Android 2022"
+    ]
+  }
+}
