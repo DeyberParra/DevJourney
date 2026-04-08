@@ -1,5 +1,9 @@
 package com.app.countries.ui.viewModel
 
+/**
+ * @author :DeyberParra
+ * @description : ViewModel that handles the various country requests and country details
+ * */
 import androidx.lifecycle.viewModelScope
 import com.app.base.data.network.BaseResource
 import com.app.base.ui.BaseViewModel
@@ -24,12 +28,7 @@ class CountriesViewModel @Inject constructor(
     val getDetailCountryUseCases: GetDetailCountryUseCases
 )  : BaseViewModel(){
 
-    init {
-        getCountries()
-    }
     private val _countriesState = MutableStateFlow<List<CountryModel>>(emptyList())
-
-
     private val _detailState = MutableStateFlow<CountryDetailModel?>(null)
     val detailState = _detailState.asStateFlow()
 
@@ -37,6 +36,7 @@ class CountriesViewModel @Inject constructor(
     private val _searchQuery = MutableStateFlow("")
     val searchQuery = _searchQuery.asStateFlow()
 
+    // search function
     val filteredCountries: StateFlow<List<CountryModel>> = combine(
         _countriesState,
         _searchQuery
@@ -44,7 +44,6 @@ class CountriesViewModel @Inject constructor(
         if (query.isBlank()) {
             list
         } else {
-
             list.filter { it.name?.contains(query, ignoreCase = true) == true }
         }
     }.stateIn(

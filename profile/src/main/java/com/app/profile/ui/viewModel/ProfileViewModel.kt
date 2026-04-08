@@ -1,4 +1,4 @@
-package com.app.profile.ui
+package com.app.profile.ui.viewModel
 
 import androidx.lifecycle.viewModelScope
 import com.app.base.data.network.BaseResource

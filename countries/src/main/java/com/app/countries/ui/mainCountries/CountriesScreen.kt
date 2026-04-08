@@ -20,6 +20,7 @@ import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
 import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
@@ -32,7 +33,9 @@ import com.app.base.navigation.Route
 import com.app.base.ui.BaseScreen
 import com.app.countries.R
 import com.app.countries.ui.viewModel.CountriesViewModel
-
+/**
+* @author : DeyberParra
+ * @description : main country section*/
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun CountriesScreen(
@@ -42,7 +45,11 @@ fun CountriesScreen(
     val countries by viewModel.filteredCountries.collectAsStateWithLifecycle()
     val searchQuery by viewModel.searchQuery.collectAsStateWithLifecycle()
 
-    BaseScreen(viewModel) {
+    LaunchedEffect(Unit) {
+        viewModel.getCountries()
+    }
+
+    BaseScreen(viewModel) { // here apply baseScreen
         Scaffold(
             topBar = {
                 TopAppBar(

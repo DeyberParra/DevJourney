@@ -1,4 +1,4 @@
-package com.app.profile.ui
+package com.app.profile.ui.mainProfileScreen
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement

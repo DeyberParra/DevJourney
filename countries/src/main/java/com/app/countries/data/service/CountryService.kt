@@ -6,6 +6,9 @@ import retrofit2.Response
 import retrofit2.http.GET
 import retrofit2.http.Path
 
+/**
+ * @author: DeyberParra
+ * @description : define Country services */
 interface CountryService {
     @GET("name/{countryName}")
     suspend fun getDetailCountry(

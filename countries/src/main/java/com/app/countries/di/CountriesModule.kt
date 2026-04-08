@@ -16,10 +16,13 @@ import dagger.hilt.components.SingletonComponent
 import retrofit2.Retrofit
 import javax.inject.Singleton
 
+/**
+ * @author: DeyberParra
+ * @description : Dagger Hilt module to inject different datasource */
+
 @Module
 @InstallIn(SingletonComponent::class)
 object CountriesModule  {
-
 
     @Provides
     @Singleton

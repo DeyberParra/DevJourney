@@ -1,4 +1,4 @@
-package com.app.profile.ui
+package com.app.profile.ui.mainProfileScreen
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column

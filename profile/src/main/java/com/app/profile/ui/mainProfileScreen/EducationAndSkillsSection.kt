@@ -1,4 +1,4 @@
-package com.app.profile.ui
+package com.app.profile.ui.mainProfileScreen
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
@@ -35,7 +35,7 @@ fun EducationAndSkillsSection(
     Column(modifier = Modifier.fillMaxWidth()) {
         // --- SKILLS GRID ---
         Text(
-            text = stringResource(com.app.profile.R.string.skills_core_competencies_title),
+            text = stringResource(R.string.skills_core_competencies_title),
             style = MaterialTheme.typography.labelLarge.copy(fontWeight = FontWeight.Bold, letterSpacing = 2.sp),
             color = MaterialTheme.colorScheme.primary,
             modifier = Modifier.padding(bottom = 16.dp)

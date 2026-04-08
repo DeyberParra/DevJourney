@@ -18,10 +18,15 @@ import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
+import com.app.base.R
 import kotlinx.coroutines.delay
-
+/**
+ * @author : DeyberParra
+ * @description :Base class for screens, aimed at sharing common functionality such as error dialog handling, loading UI elements, and others.
+ * */
 @Composable
 fun BaseScreen(
     viewModel: BaseViewModel,
@@ -88,7 +93,7 @@ fun ErrorMessage(
                 )
 
                 TextButton(onClick = onDismiss) {
-                    Text("OK", color = MaterialTheme.colorScheme.onError)
+                    Text(stringResource(R.string.dialog_error_ok_option), color = MaterialTheme.colorScheme.onError)
                 }
             }
         }

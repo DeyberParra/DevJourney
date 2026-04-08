@@ -11,6 +11,10 @@ import com.app.countries.data.model.response.NameModel
 import com.app.countries.data.model.response.NativeNameDto
 import com.app.countries.data.model.response.NativeNameModel
 
+/**
+ * @author : DeyberParra
+ * @descrioption : country mappers convert DTO to Model
+ * */
 
 fun CountryDetailResponseDto.toModel() : CountryDetailModel {
     return CountryDetailModel(

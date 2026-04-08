@@ -3,7 +3,7 @@ package com.app.profile.navigation
 import androidx.navigation.NavGraphBuilder
 import androidx.navigation.compose.composable
 import com.app.base.navigation.Route
-import com.app.profile.ui.ProfileScreen
+import com.app.profile.ui.mainProfileScreen.ProfileScreen
 
 fun NavGraphBuilder.profileScreen(
 ) {

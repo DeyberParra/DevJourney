@@ -12,7 +12,9 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 import com.app.base.ui.AppDimensions
 import com.app.base.ui.LocalAppDimensions
-
+/**
+ * @author : DeyberParra
+ * @description : App theme configurations*/
 @Composable
 fun DevJourneyTheme(
     darkTheme: Boolean = isSystemInDarkTheme(),

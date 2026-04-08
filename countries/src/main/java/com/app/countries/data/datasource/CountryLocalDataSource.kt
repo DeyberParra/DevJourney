@@ -5,6 +5,10 @@ import dagger.hilt.android.qualifiers.ApplicationContext
 import java.io.InputStream
 import javax.inject.Inject
 
+/**
+ * @author : DeyberParra
+ * @description : local data source of countries*/
+
 class CountryLocalDataSource @Inject constructor(
     @ApplicationContext private val context: Context
 ) {

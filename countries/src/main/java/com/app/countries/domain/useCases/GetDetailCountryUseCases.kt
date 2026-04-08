@@ -8,14 +8,13 @@ import com.app.countries.domain.mapper.toModel
 import javax.inject.Inject
 
 /**
- * get All contries
+ * @author : DeyberParra
+ * @description : UseCase get country detail
  */
 class GetDetailCountryUseCases @Inject constructor(
     private val repository: CountryRepository
 ) {
-    /**
-     * Call to repository and mapper base response to viewModel
-     */
+
     suspend operator fun invoke(country : String): BaseResource<List<CountryDetailModel>> {
         return safeApiCall(
             call = { repository.getDetailCountry(country) },

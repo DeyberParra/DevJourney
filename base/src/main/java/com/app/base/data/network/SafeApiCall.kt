@@ -4,8 +4,8 @@ import retrofit2.Response
 import java.io.IOException
 
 /**
- *
- * Generic function to safely perform network calls.
+ * @author : DeyberParra
+ * @description :Generic function to safely perform network calls.
  * @param call The Retrofit call to execute.
  * @param map A function to transform the response DTO into a domain object (Model).
  * @return A [BaseResource] representing the result (Success, Error, or Loading).

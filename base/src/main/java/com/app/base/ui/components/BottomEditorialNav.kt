@@ -17,13 +17,19 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavBackStackEntry
 import androidx.navigation.NavDestination.Companion.hasRoute
+import com.app.base.R
 import com.app.base.navigation.Route
 import com.app.base.ui.theme.AppTheme
 
+/**
+ * @author : DeyberParra
+ * @description : Visual component that enables navigation between routes, as well as its visual handling
+ * */
 @Composable
 fun BottomEditorialNav(
     navBackStackEntry: NavBackStackEntry?,
@@ -66,7 +72,7 @@ fun BottomEditorialNav(
                     horizontalArrangement = Arrangement.spacedBy(AppTheme.dimensions.miniPadding)
                 ) {
                     Icon(Icons.Default.AccountBox, contentDescription = null, tint = MaterialTheme.colorScheme.primary)
-                    Text("Profile", style = MaterialTheme.typography.labelSmall, fontWeight = FontWeight.Bold)
+                    Text(stringResource(R.string.buttom_bar_profile), style = MaterialTheme.typography.labelSmall, fontWeight = FontWeight.Bold)
                 }
             }
 
@@ -83,7 +89,7 @@ fun BottomEditorialNav(
                     horizontalArrangement = Arrangement.spacedBy(8.dp)
                 ) {
                     Icon(Icons.Default.Map, contentDescription = null, tint = MaterialTheme.colorScheme.primary)
-                    Text("Country", style = MaterialTheme.typography.labelSmall, fontWeight = FontWeight.Bold)
+                    Text(stringResource(R.string.buttom_bar_countries), style = MaterialTheme.typography.labelSmall, fontWeight = FontWeight.Bold)
                 }
             }
         }

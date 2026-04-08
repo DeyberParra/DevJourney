@@ -1,4 +1,4 @@
-package com.app.profile.ui
+package com.app.profile.ui.mainProfileScreen
 
 import android.graphics.BitmapFactory
 import androidx.compose.runtime.Composable

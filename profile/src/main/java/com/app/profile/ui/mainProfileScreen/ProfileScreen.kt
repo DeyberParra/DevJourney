@@ -1,4 +1,4 @@
-package com.app.profile.ui
+package com.app.profile.ui.mainProfileScreen
 
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.layout.Column
@@ -22,7 +22,11 @@ import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.app.base.ui.BaseScreen
+import com.app.profile.ui.viewModel.ProfileViewModel
 
+/**
+ *@author : DeyberParra
+ *@description : Main Profile Screen*/
 @Composable
 fun ProfileScreen(
     viewModel: ProfileViewModel = hiltViewModel()

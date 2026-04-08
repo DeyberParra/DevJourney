@@ -8,6 +8,7 @@ import com.app.base.navigation.Route
 import com.app.countries.ui.detailCountry.DetailCountryScreen
 import com.app.countries.ui.mainCountries.CountriesScreen
 
+// graph to main countries section
 fun NavGraphBuilder.countryScreen(
     navController: NavController
 ) {
@@ -16,6 +17,7 @@ fun NavGraphBuilder.countryScreen(
     }
 }
 
+//graph to detail country selected
 fun NavGraphBuilder.detailCountryScreen(
     onBackClick: () -> Unit
 ){

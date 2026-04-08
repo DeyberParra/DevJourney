@@ -3,6 +3,9 @@ package com.app.base.ui
 import androidx.compose.runtime.staticCompositionLocalOf
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
+/**
+ * @author : DeyberParra
+ * @descriptiom : dimens definitions*/
 
 data class AppDimensions(
     val screenPadding: Dp = 16.dp,
@@ -20,5 +23,4 @@ data class AppDimensions(
     val spacerLarge: Dp = 32.dp
 )
 
-// Creamos el Local para que el tema lo pueda proveer
 val LocalAppDimensions = staticCompositionLocalOf { AppDimensions() }

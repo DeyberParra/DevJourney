@@ -1,4 +1,4 @@
-package com.app.profile.ui
+package com.app.profile.ui.mainProfileScreen
 
 
 import androidx.compose.foundation.layout.Column
@@ -12,6 +12,7 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.app.profile.R
 import com.app.profile.data.WorkExperience
 
 @Composable
@@ -22,7 +23,7 @@ fun ExperienceSection(experiences: List<WorkExperience>) {
             .padding(vertical = 16.dp)
     ) {
         Text(
-            text = stringResource(com.app.profile.R.string.professional_dispatches_title),
+            text = stringResource(R.string.professional_dispatches_title),
             style = MaterialTheme.typography.labelLarge.copy(
                 fontWeight = FontWeight.Bold,
                 letterSpacing = 2.sp

@@ -6,6 +6,10 @@ import com.app.profile.data.ProfileResponse
 import com.google.gson.Gson
 import javax.inject.Inject
 
+/**
+ * @author : DeyberParra
+ * @description : Repository that provides user information, with data stored locally
+ * */
 class ProfileRepository @Inject constructor(
     private val assetManager: AssetManager,
     private val gson: Gson

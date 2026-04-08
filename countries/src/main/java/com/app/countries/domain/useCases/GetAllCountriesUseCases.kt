@@ -6,6 +6,10 @@ import com.app.countries.data.repository.CountryRepository
 import com.app.countries.domain.model.CountryModel
 import javax.inject.Inject
 
+/**
+ * @author : DeyberParra
+ * @description :Use case that retrieves all countries
+ * */
 class GetAllCountriesUseCases @Inject constructor(
     private val repository: CountryRepository
 ) {

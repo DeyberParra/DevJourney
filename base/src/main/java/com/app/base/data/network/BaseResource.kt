@@ -1,6 +1,8 @@
 package com.app.base.data.network
 /**
- * Types of Results */
+ * @author : DeyberParra
+ * @description: Manages the different possible results that API requests can have
+ * */
 sealed class BaseResource<out T> {
     data class Success<out T>(val data: T) : BaseResource<T>()
     data class Error(val error : BaseResourceError) : BaseResource<Nothing>()

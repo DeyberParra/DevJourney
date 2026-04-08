@@ -26,6 +26,7 @@ class CountryRepositoryImpl @Inject constructor(
         return countryService.getDetailCountry(countryName)
     }
 
+    // convert type source inputStream to CountryModel
     private fun parseStringArrayXml(inputStream: InputStream): List<CountryModel> {
         val countries = mutableListOf<CountryModel>()
         val factory = XmlPullParserFactory.newInstance()
