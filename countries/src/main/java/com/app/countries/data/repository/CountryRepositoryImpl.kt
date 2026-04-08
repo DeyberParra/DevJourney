@@ -41,8 +41,6 @@ class CountryRepositoryImpl @Inject constructor(
                 if (eventType == XmlPullParser.START_TAG && tagName == "item") {
                     val countryName = parser.nextText()
                     if (countryName.isNotEmpty()) {
-                        // Aquí creas tu objeto de dominio.
-                        // Como Senior, podrías generar un ID basado en el nombre o un UUID.
                         countries.add(CountryModel(name = countryName))
                     }
                 }

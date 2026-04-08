@@ -6,7 +6,6 @@ import com.app.base.navigation.Route
 import com.app.profile.ui.ProfileScreen
 
 fun NavGraphBuilder.profileScreen(
-    onNavigateToCountries: () -> Unit
 ) {
     composable<Route.Profile> {
         ProfileScreen()

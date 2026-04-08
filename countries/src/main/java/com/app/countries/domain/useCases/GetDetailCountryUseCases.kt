@@ -2,9 +2,9 @@ package com.app.countries.domain.useCases
 
 import com.app.base.data.network.BaseResource
 import com.app.base.data.network.safeApiCall
+import com.app.countries.data.model.response.CountryDetailModel
 import com.app.countries.data.repository.CountryRepository
 import com.app.countries.domain.mapper.toModel
-import com.app.countries.domain.model.CountryDetailModel
 import javax.inject.Inject
 
 /**

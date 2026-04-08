@@ -1,20 +1,21 @@
 package com.app.countries.domain.mapper
 
+import com.app.countries.data.model.response.CountryDetailModel
 import com.app.countries.data.model.response.CountryDetailResponseDto
 import com.app.countries.data.model.response.CurrencyDto
+import com.app.countries.data.model.response.CurrencyModel
 import com.app.countries.data.model.response.FlagsDto
+import com.app.countries.data.model.response.FlagsModel
 import com.app.countries.data.model.response.NameDto
+import com.app.countries.data.model.response.NameModel
 import com.app.countries.data.model.response.NativeNameDto
-import com.app.countries.domain.model.CountryDetailModel
-import com.app.countries.domain.model.CurrencyModel
-import com.app.countries.domain.model.FlagsModel
-import com.app.countries.domain.model.NameModel
-import com.app.countries.domain.model.NativeNameModel
+import com.app.countries.data.model.response.NativeNameModel
 
 
-fun CountryDetailResponseDto.toModel() : CountryDetailModel{
+fun CountryDetailResponseDto.toModel() : CountryDetailModel {
     return CountryDetailModel(
         name = name.toModel(),
+        area = area,
         cca2 = cca2,
         cca3 = cca3,
         flagEmoji = flagEmoji,

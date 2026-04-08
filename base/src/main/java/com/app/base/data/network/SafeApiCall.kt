@@ -4,11 +4,11 @@ import retrofit2.Response
 import java.io.IOException
 
 /**
- * Función genérica para realizar llamadas a red de forma segura.
- * 
- * @param call La llamada de Retrofit a realizar.
- * @param map Una función para transformar el DTO de respuesta en el objeto de dominio (Model).
- * @return Un [BaseResource] representando el resultado (Success, Error o Loading).
+ *
+ * Generic function to safely perform network calls.
+ * @param call The Retrofit call to execute.
+ * @param map A function to transform the response DTO into a domain object (Model).
+ * @return A [BaseResource] representing the result (Success, Error, or Loading).
  */
 suspend fun <T, R> safeApiCall(
     call: suspend () -> Response<T>,
@@ -21,11 +21,9 @@ suspend fun <T, R> safeApiCall(
             if (body != null) {
                 BaseResource.Success(map(body))
             } else {
-                // El cuerpo es nulo, lo cual suele ser un error del servidor o respuesta inesperada
                 BaseResource.Error(BaseResourceError.ServerError)
             }
         } else {
-            // El servidor respondió con un código de error (4xx o 5xx)
             val error = when (response.code()) {
                 401 -> BaseResourceError.Unauthorized
                 500 -> BaseResourceError.ServerError
@@ -34,10 +32,8 @@ suspend fun <T, R> safeApiCall(
             BaseResource.Error(error)
         }
     } catch (e: IOException) {
-        // Error de red (sin internet, timeout, etc.)
         BaseResource.Error(BaseResourceError.NetworkError)
     } catch (e: Exception) {
-        // Cualquier otro error inesperado (mapeo, etc.)
         BaseResource.Error(BaseResourceError.UnknownError(e))
     }
 }

@@ -39,7 +39,6 @@ fun EducationAndSkillsSection(
             modifier = Modifier.padding(bottom = 16.dp)
         )
 
-        // Usamos FlowRow para que las etiquetas se ajusten solas al ancho
         FlowRow(
             modifier = Modifier.fillMaxWidth(),
             horizontalArrangement = Arrangement.spacedBy(8.dp),

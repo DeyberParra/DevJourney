@@ -1,9 +1,14 @@
-package com.app.base.navigation// En módulo :base o :core
+package com.app.base.navigation
 import kotlinx.serialization.Serializable
 
+@Serializable
 sealed interface Route {
-    @Serializable object Profile : Route
-    @Serializable object Countries : Route
-    @Serializable object CountriesDetail : Route
-    @Serializable object Settings : Route // Tu tercera vista
+    @Serializable
+    data object Profile : Route
+
+    @Serializable
+    data object Countries : Route
+
+    @Serializable
+    data class CountriesDetail(val countryName: String) : Route
 }

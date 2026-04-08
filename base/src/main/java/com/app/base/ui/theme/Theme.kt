@@ -14,7 +14,7 @@ import androidx.compose.ui.platform.LocalContext
 @Composable
 fun DevJourneyTheme(
     darkTheme: Boolean = isSystemInDarkTheme(),
-    dynamicColor: Boolean = false, // Lo cambiamos a false para priorizar tus colores de marca
+    dynamicColor: Boolean = false,
     content: @Composable () -> Unit
 ) {
 
@@ -32,11 +32,11 @@ fun DevJourneyTheme(
         surfaceVariant = SurfaceVariantGray,
         onSurface = OnSurfaceBlack,
         onSurfaceVariant = OnSurfaceVariantGray,
-        outline = Color(0xFF757684) // Basado en tu HTML
+        outline = Color(0xFF757684)
     )
 
     val DarkColorScheme = darkColorScheme(
-        primary = Color(0xFFADC6FF), // Versión más clara para legibilidad
+        primary = Color(0xFFADC6FF),
         onPrimary = Color(0xFF001D6F),
         primaryContainer = Color(0xFF24389C),
         onPrimaryContainer = Color(0xFFDDE1FF),
@@ -57,7 +57,7 @@ fun DevJourneyTheme(
 
     MaterialTheme(
         colorScheme = colorScheme,
-        typography = Typography, // Asegúrate de que use Manrope/Inter
+        typography = Typography,
         content = content
     )
 }

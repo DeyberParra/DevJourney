@@ -4,6 +4,7 @@ import com.google.gson.annotations.SerializedName
 
 data class CountryDetailResponseDto(
     @SerializedName("name") val name: NameDto,
+    @SerializedName("area") val area: Long,
     @SerializedName("cca2") val cca2: String, // Código ISO alfa-2
     @SerializedName("cca3") val cca3: String,
     @SerializedName("flag") val flagEmoji: String,

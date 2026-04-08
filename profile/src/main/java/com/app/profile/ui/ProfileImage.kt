@@ -16,7 +16,7 @@ fun ProfileImage(image: String) {
     val painter = rememberAssetPainter(image)
     Image(
         painter = painter,
-        contentDescription = "Alex Rivera Profile",
+        contentDescription = image,
         modifier = Modifier
             .size(280.dp)
             .clip(CircleShape)

@@ -6,6 +6,5 @@ import retrofit2.Response
 
 interface CountryRepository {
     suspend fun getLocalCountries(): List<CountryModel>
-
     suspend fun getDetailCountry(countryName : String) : Response<List<CountryDetailResponseDto>>
 }

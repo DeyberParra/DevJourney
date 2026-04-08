@@ -1,7 +1,8 @@
-package com.app.countries.domain.model
+package com.app.countries.data.model.response
 
 data class CountryDetailModel(
     val name: NameModel,
+    val area : Long,
     val cca2: String,
     val cca3: String,
     val flagEmoji: String,
@@ -32,7 +33,7 @@ data class CurrencyModel(
 )
 
 data class FlagsModel(
-    val png: String,
-    val svg: String,
-    val alt: String?
+    val png: String = "",
+    val svg: String = "",
+    val alt: String? = ""
 )

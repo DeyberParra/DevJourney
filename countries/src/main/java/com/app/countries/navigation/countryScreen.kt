@@ -1,13 +1,29 @@
 package com.app.countries.navigation
 
+import androidx.navigation.NavController
 import androidx.navigation.NavGraphBuilder
 import androidx.navigation.compose.composable
+import androidx.navigation.toRoute
 import com.app.base.navigation.Route
-import com.app.countries.ui.Greeting
+import com.app.countries.ui.detailCountry.DetailCountryScreen
+import com.app.countries.ui.mainCountries.CountriesScreen
 
-fun NavGraphBuilder.countryScreen() {
+fun NavGraphBuilder.countryScreen(
+    navController: NavController
+) {
     composable<Route.Countries> {
-        //ProfileScreen()
-        Greeting()
+        CountriesScreen(navController)
+    }
+}
+
+fun NavGraphBuilder.detailCountryScreen(
+    onBackClick: () -> Unit
+){
+    composable<Route.CountriesDetail> { backStackEntry ->
+        val detail = backStackEntry.toRoute<Route.CountriesDetail>()
+        DetailCountryScreen(
+            countryName = detail.countryName,
+            onBackClick = onBackClick
+        )
     }
 }

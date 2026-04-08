@@ -31,7 +31,7 @@ fun ExperienceItem(experience: WorkExperience, isLast: Boolean) {
         modifier = Modifier.fillMaxWidth(),
         horizontalArrangement = Arrangement.spacedBy(16.dp)
     ) {
-        // Columna del Indicador (Timeline)
+
         Column(horizontalAlignment = Alignment.CenterHorizontally) {
             Box(
                 modifier = Modifier
@@ -56,7 +56,7 @@ fun ExperienceItem(experience: WorkExperience, isLast: Boolean) {
             }
         }
 
-        // Columna del Contenido
+
         Column(
             modifier = Modifier
                 .weight(1f)

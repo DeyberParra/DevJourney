@@ -15,6 +15,7 @@ import com.app.base.navigation.Route
 import com.app.base.ui.components.BottomEditorialNav
 import com.app.base.ui.theme.DevJourneyTheme
 import com.app.countries.navigation.countryScreen
+import com.app.countries.navigation.detailCountryScreen
 import com.app.profile.navigation.profileScreen
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -26,7 +27,6 @@ class MainActivity : ComponentActivity() {
         setContent {
             DevJourneyTheme {
                 val navController = rememberNavController()
-                val currentBackStackEntry = navController.currentBackStackEntryAsState()
                 val navBackStackEntry = navController.currentBackStackEntryAsState().value
                 Scaffold(
                     modifier = Modifier.fillMaxSize(),
@@ -59,10 +59,11 @@ class MainActivity : ComponentActivity() {
                         startDestination = Route.Profile,
                         modifier = Modifier.padding(innerPadding)
                     ) {
-                        profileScreen(onNavigateToCountries = {
-                            navController.navigate(Route.Countries)
+                        profileScreen()
+                        countryScreen(navController)
+                        detailCountryScreen(onBackClick = {
+                            navController.popBackStack()
                         })
-                        countryScreen()
                     }
                 }
             }
