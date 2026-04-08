@@ -4,7 +4,6 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.app.base.data.network.BaseResource
 import com.app.profile.data.ProfileData
-import com.app.profile.data.repository.ProfileRepository
 import com.app.profile.domain.GetDevProfileUseCase
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Dispatchers
@@ -26,10 +25,9 @@ class ProfileViewModel @Inject constructor(
             val data = getDevProfileUseCase.invoke()
             when(data){
                 is BaseResource.Success ->{
-                    println("deyber:success: ${data.data}")
+                    _profileState.value = data.data
                 }
                 is BaseResource.Error -> {
-                    println("deyber:error: ${data.error}")
                 }
 
                 is BaseResource.Loading ->{
