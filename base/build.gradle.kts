@@ -45,6 +45,7 @@ dependencies {
 
     // Hilt
     implementation(libs.hilt.android)
+    implementation(libs.androidx.navigation.common.ktx)
     ksp(libs.hilt.compiler)
 
     //navigation

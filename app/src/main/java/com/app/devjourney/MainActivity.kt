@@ -9,6 +9,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Scaffold
 import androidx.compose.ui.Modifier
 import androidx.navigation.compose.NavHost
+import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
 import com.app.base.navigation.Route
 import com.app.base.ui.components.BottomEditorialNav
@@ -25,10 +26,13 @@ class MainActivity : ComponentActivity() {
         setContent {
             DevJourneyTheme {
                 val navController = rememberNavController()
+                val currentBackStackEntry = navController.currentBackStackEntryAsState()
+                val navBackStackEntry = navController.currentBackStackEntryAsState().value
                 Scaffold(
                     modifier = Modifier.fillMaxSize(),
                     bottomBar = {
                         BottomEditorialNav(
+                            navBackStackEntry = navBackStackEntry,
                             onNavigateToProfile = {
                                 navController.navigate(Route.Profile) {
                                     popUpTo(navController.graph.startDestinationId) {
