@@ -11,6 +11,7 @@ data class AppDimensions(
     val screenPadding: Dp = 16.dp,
     val defaultPadding :Dp = 16.dp,
     val miniPadding :Dp = 8.dp,
+    val medPadding :Dp = 8.dp,
     val rowPadding :Dp = 12.dp,
     val gridSpacing: Dp = 8.dp,
     val cardElevation: Dp = 4.dp,
@@ -20,7 +21,10 @@ data class AppDimensions(
     val buttonHeight: Dp = 48.dp,
     val spacerSmall: Dp = 8.dp,
     val spacerMedium: Dp = 16.dp,
-    val spacerLarge: Dp = 32.dp
+    val spacerLarge: Dp = 32.dp,
+    val spacerExtraLarge: Dp = 100.dp,
+    val borderStrokerDefault: Dp = 6.dp,
+    val shadowElevationDefault: Dp = 12.dp
 )
 
 val LocalAppDimensions = staticCompositionLocalOf { AppDimensions() }
