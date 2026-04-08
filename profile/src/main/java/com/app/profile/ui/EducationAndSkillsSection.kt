@@ -20,9 +20,11 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.app.profile.R
 import com.app.profile.data.Education
 
 @Composable
@@ -33,7 +35,7 @@ fun EducationAndSkillsSection(
     Column(modifier = Modifier.fillMaxWidth()) {
         // --- SKILLS GRID ---
         Text(
-            text = "CORE COMPETENCIES",
+            text = stringResource(com.app.profile.R.string.skills_core_competencies_title),
             style = MaterialTheme.typography.labelLarge.copy(fontWeight = FontWeight.Bold, letterSpacing = 2.sp),
             color = MaterialTheme.colorScheme.primary,
             modifier = Modifier.padding(bottom = 16.dp)
@@ -60,7 +62,7 @@ fun EducationAndSkillsSection(
 
         // --- EDUCATION ---
         Text(
-            text = "ACADEMIC FORMATION",
+            text = stringResource(R.string.skills_academic_title),
             style = MaterialTheme.typography.labelLarge.copy(fontWeight = FontWeight.Bold, letterSpacing = 2.sp),
             color = MaterialTheme.colorScheme.primary,
             modifier = Modifier.padding(bottom = 16.dp)

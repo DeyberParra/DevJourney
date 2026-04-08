@@ -1,6 +1,5 @@
 package com.app.countries.ui.viewModel
 
-import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.app.base.data.network.BaseResource
 import com.app.base.ui.BaseViewModel
@@ -10,7 +9,6 @@ import com.app.countries.domain.useCases.GetAllCountriesUseCases
 import com.app.countries.domain.useCases.GetDetailCountryUseCases
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.flow.StateFlow
@@ -30,7 +28,7 @@ class CountriesViewModel @Inject constructor(
         getCountries()
     }
     private val _countriesState = MutableStateFlow<List<CountryModel>>(emptyList())
-    val countriesState = _countriesState.asStateFlow()
+
 
     private val _detailState = MutableStateFlow<CountryDetailModel?>(null)
     val detailState = _detailState.asStateFlow()

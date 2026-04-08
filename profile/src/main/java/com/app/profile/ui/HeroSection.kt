@@ -10,9 +10,11 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.app.profile.R
 
 @Composable
 fun HeroSection(name: String= "", role : String= "") {
@@ -24,7 +26,7 @@ fun HeroSection(name: String= "", role : String= "") {
 
         Column(modifier = Modifier.padding(bottom = 8.dp)) {
             Text(
-                text = "PORTFOLIO",
+                text = stringResource(R.string.hero_portfolio),
                 style = MaterialTheme.typography.labelSmall,
                 color = MaterialTheme.colorScheme.tertiary,
                 fontWeight = FontWeight.Bold,

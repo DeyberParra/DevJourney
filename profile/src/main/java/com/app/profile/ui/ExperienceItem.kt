@@ -43,7 +43,7 @@ fun ExperienceItem(experience: WorkExperience, isLast: Boolean) {
                 Box(
                     modifier = Modifier
                         .width(2.dp)
-                        .height(100.dp) // Ajustable o dinámico
+                        .height(100.dp)
                         .background(
                             brush = verticalGradient(
                                 colors = listOf(

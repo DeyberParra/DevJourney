@@ -11,10 +11,12 @@ import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.app.profile.R
 
 @Composable
 fun ManifestoSection(manifest : String = "") {
@@ -24,7 +26,7 @@ fun ManifestoSection(manifest : String = "") {
             .padding(vertical = 24.dp)
     ) {
         Text(
-            text = "THE MANIFESTO",
+            text = stringResource(R.string.manifesto_title),
             style = MaterialTheme.typography.labelLarge.copy(
                 fontWeight = FontWeight.Bold,
                 letterSpacing = 2.sp

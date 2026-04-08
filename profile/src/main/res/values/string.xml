@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Countries App</string>
+
+    <string name="hero_portfolio">PORTFOLIO</string>
+    <string name="manifesto_title">THE MANIFESTO</string>
+    <string name="skills_core_competencies_title">CORE COMPETENCIES</string>
+    <string name="skills_academic_title">ACADEMIC FORMATION</string>
+    <string name="professional_dispatches_title">PROFESSIONAL DISPATCHES</string>
+</resources>

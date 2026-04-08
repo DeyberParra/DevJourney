@@ -35,7 +35,6 @@ fun CountryItem(
         modifier = Modifier
             .fillMaxWidth()
             .padding(vertical = 4.dp),
-        //hoverStrategy = HoverStrategy.Colored
     ) {
         Row(
             modifier = Modifier
@@ -45,7 +44,6 @@ fun CountryItem(
             horizontalArrangement = Arrangement.SpaceBetween
         ) {
             Row(verticalAlignment = Alignment.CenterVertically) {
-                // Icono decorativo o inicial del país
                 Box(
                     modifier = Modifier
                         .size(48.dp)

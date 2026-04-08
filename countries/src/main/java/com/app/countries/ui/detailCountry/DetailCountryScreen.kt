@@ -31,6 +31,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -38,6 +39,7 @@ import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import coil.compose.AsyncImage
 import com.app.base.ui.BaseScreen
+import com.app.countries.R
 import com.app.countries.data.model.response.CountryDetailModel
 import com.app.countries.ui.viewModel.CountriesViewModel
 
@@ -122,12 +124,12 @@ private fun CountryDetailContent(country: CountryDetailModel) {
 
         Row(modifier = Modifier.fillMaxWidth()) {
             InfoDataBlock(
-                label = "POPULATION",
+                label = stringResource(R.string.population_title),
                 value = formatNumber(country.population),
                 modifier = Modifier.weight(1f)
             )
             InfoDataBlock(
-                label = "AREA (km²)",
+                label = stringResource(R.string.area_title),
                 value = formatNumber(country.area),
                 modifier = Modifier.weight(1f)
             )
@@ -137,12 +139,12 @@ private fun CountryDetailContent(country: CountryDetailModel) {
 
         Row(modifier = Modifier.fillMaxWidth()) {
             InfoDataBlock(
-                label = "REGION",
+                label = stringResource(R.string.region_title),
                 value = country.region,
                 modifier = Modifier.weight(1f)
             )
             InfoDataBlock(
-                label = "SUB-REGION",
+                label = stringResource(R.string.subregion_title),
                 value = country.subregion.orEmpty(),
                 modifier = Modifier.weight(1f)
             )
