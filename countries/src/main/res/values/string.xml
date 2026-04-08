@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="population_title">POPULATION</string>
+    <string name="area_title">AREA (km²)</string>
+    <string name="region_title">REGION</string>
+    <string name="subregion_title">SUB-REGION</string>
+
+
+    <string name="countries_title">Countries</string>
+    <string name="countries_search_country_title">Search country...</string>
+
+
+</resources>
